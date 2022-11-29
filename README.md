@@ -3,6 +3,12 @@
 _Se realiza la entrega de la prueba requerida_
 
 
+## Diagrama 🖼
+
+
+![diagram](https://user-images.githubusercontent.com/64277197/204612026-0ce37de6-dd85-43f8-8c71-545d061f930e.png)
+
+
 ### Entrega 📋
 
 La solucion de la prueba esta dividida en dos partes por lo que en cada carpeta tanto el back-end como el front-end tiene sus indicaciones para dar 
@@ -18,18 +24,9 @@ solucion a la prueba
 * Comenta a otros sobre este proyecto 📢
 * Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
 * Da las gracias públicamente 🤓.
-* etc.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* etc.![Uploading diagram.png…]()
 
 
----
 ⌨️ con ❤️ por [Alejandro Castellanos](https://github.com/caacastellanosc) 😊
 
 
