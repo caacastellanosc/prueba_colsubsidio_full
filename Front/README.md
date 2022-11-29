@@ -20,7 +20,7 @@ npm i
 ng serve -o
 ```
 
-_Se  te abrira el explorador si quieres ver el demo puedes acceder a:_
+_Se  te abrira el explorador con la solucion
 
 
 
