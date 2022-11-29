@@ -1,0 +1,26 @@
+<div class="modal-dialog card p-4">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Numeros de telefono</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="cerrarModal()"></button>
+    </div>
+    <div class="modal-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Numeros</th>
+            <th scope="col">Ciudad</th>
+            <th scope="col">Pais</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let item of numeros; let indice = index">
+          <tr>
+            <td>{{item.number}}</td>
+            <td>{{item.cityCode}}</td>
+            <td>{{item.contryCode}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

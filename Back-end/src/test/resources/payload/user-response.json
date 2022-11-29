@@ -1,0 +1,24 @@
+{
+  "failure": false,
+  "code": 200,
+  "message": null,
+  "body": {
+    "id": "1b909a15-b309-4adc-a418-051e99c6ff00",
+    "name": "Luis",
+    "email": "a2@rodriguez.org",
+    "password": "hunter1*A",
+    "phones": [
+      {
+        "id": 2,
+        "number": 989,
+        "cityCode": 2,
+        "contryCode": 58
+      }
+    ],
+    "created": "2022-11-23T03:12:18.539+00:00",
+    "modified": "2022-11-23T03:12:18.539+00:00",
+    "lastLogin": "2022-11-23T03:12:18.539+00:00",
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYmYiOjE2NjkxNzMxMzgsImlzcyI6ImFmaWxpYWNpb25lcyIsImV4cCI6MTY2OTE3MzMxMSwiaWF0IjoxNjY5MTczMTM4fQ.v3o5rRfXShXH2hGFP9Eux_1qxbxSEgmc3-B7dxANP1c",
+    "isActive": true
+  }
+}

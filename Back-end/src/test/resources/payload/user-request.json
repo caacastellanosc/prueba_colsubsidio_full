@@ -1,0 +1,12 @@
+{
+  "name":"Luis",
+  "email":"a2@rodriguez.org",
+  "password":"hunter1*A",
+  "phones":[
+    {
+      "number":"989",
+      "citycode":"2",
+      "contrycode":"58"
+    }
+  ]
+}

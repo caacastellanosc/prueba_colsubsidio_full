@@ -1,0 +1,32 @@
+<form [formGroup]="filtros" (ngSubmit)="enviarFiltros(filtros)">
+  <div class="row disenoFiltro">
+    <div class="cl-lg-3 col-md-3 col-3 d-block">
+      <p>Nombre</p>
+      <input type="text" class="form-control" formControlName="name" aria-label="Small"
+        aria-describedby="inputGroup-sizing-sm">
+    </div>
+    <div class="cl-lg-3 col-md-3 col-3 d-block">
+      <p>Correo</p>
+      <input type="text" class="form-control" formControlName="email" aria-label="Small"
+        aria-describedby="inputGroup-sizing-sm">
+    </div>
+    <div class="cl-lg-5 col-md-5 col-6 d-flex">
+      <div class="cl-lg-6 col-md-6 col-6 d-block">
+        <p>fecha creación inicio</p>
+        <input type="date" class="form-control" formControlName="startDate" aria-label="Small"
+          aria-describedby="inputGroup-sizing-sm" [ngClass]="{ 'is-invalid': errores('startDate')}">
+          <div class="colorError" *ngIf="filtros.get('startDate')?.errors?.['required']">la fecha inicial es requerida, cuando la final esta seleccionada</div>
+      </div>
+      <div class="cl-lg-6 col-md-6 col-6 d-block">
+        <p>fecha creación fin</p>
+        <input type="date" class="form-control" formControlName="endDate" aria-label="Small"
+          aria-describedby="inputGroup-sizing-sm" [ngClass]="{ 'is-invalid': errores('endDate')}"
+          [min]="filtros.get('startDate')?.value">
+          <div class="colorError" *ngIf="filtros.get('endDate')?.errors?.['required']">la fecha final es requerida, cuando la inicial esta seleccionada</div>
+      </div>
+    </div>
+    <div class="col-lg-1 col-md-1 justify-content-center d-flex align-items-center">
+      <button type="submit" class="btn btn-primary"  [disabled]="!filtros.valid">Filtrar</button>
+    </div>
+  </div>
+</form>

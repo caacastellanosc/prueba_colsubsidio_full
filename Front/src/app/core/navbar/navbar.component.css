@@ -1,0 +1,9 @@
+.espacioLogo {
+    background: #fffdfe14;
+    border-radius: 1.7rem;
+    padding: 0.3rem;
+}
+
+.puntero {
+    cursor: pointer;
+}

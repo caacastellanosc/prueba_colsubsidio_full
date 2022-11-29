@@ -1,0 +1,85 @@
+<div class="card mt-4">
+  <div class="card-content">
+    <app-alerta *ngIf="mensajeAlerta.mensaje !== ''" [mensajeAlerta]="mensajeAlerta" (cerrarAlerta)="cerrarAlerta()">
+    </app-alerta>
+    <div class="card-header fondoHeader d-flex justify-content-between pl-0 pr-0">
+      <h4 class="card-title">
+        <a href=""> Registro usuarios
+        </a>
+      </h4>
+      <div>
+        <button type="button" class="btn btn-primary" (click)="cerrarRegistro.emit()">Cerrar</button>
+      </div>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="guardar(form)">
+      <div>
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <div class="form-group mt-2">
+              <label>Nombre</label>
+              <input type="text" autocomplete="off" formControlName="name" class="form-control" id="nombre"
+                placeholder="Ingresa nombre" [ngClass]="{ 'is-invalid': errores('name')}">
+              <div class="colorError" *ngIf="form.get('name')?.errors?.['required']">El nombre es requerido</div>
+              <div class="colorError" *ngIf="form.get('name')?.errors?.['pattern']">El nombre solo debe contener letras</div>
+            </div>
+
+            <div class="form-group">
+              <label>Correo</label>
+              <input type="text" autocomplete="off" formControlName="email" class="form-control"
+                placeholder="Ingresa email" [ngClass]="{ 'is-invalid': errores('email')}">
+              <div class="colorError" *ngIf="form.get('email')?.errors?.['required']">El campo es requerido</div>
+              <div class="colorError" *ngIf="form.get('email')?.errors?.['pattern']">El correo debe tener un formato adecuado</div>
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input type="text" autocomplete="off" formControlName="password" class="form-control" id="password"
+                placeholder="Ingresa password" [ngClass]="{ 'is-invalid': errores('password')}">
+              <div class="colorError" *ngIf="form.get('password')?.errors?.['required']">El campo es requerido</div>
+              <div class="colorError" *ngIf="form.get('password')?.errors?.['pattern']">
+                Minimo 8 caracteres <br>
+                Maximo 15<br>
+                Al menos una letra mayúscula<br>
+                Al menos una letra minucula<br>
+                Al menos un dígito<br>
+                No espacios en blanco<br>
+                Al menos 1 caracter especial
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6" formArrayName="phones">
+            <div class="d-flex justify-content-end mt-2">
+              <p (click)="agregarTelefono()" class="agregar">Agregar nuevo teléfono</p>
+            </div>
+            <div class="card" *ngFor="let item of listaTelefonosget(totalTelefonos); let indice = index">
+              <div class="card-content col-lg-12 d-flex" [formGroupName]="indice">
+                <div class=" col-lg-4">
+                  <label>Teléfono</label>
+                  <input type="text" formControlName="number" class="form-control" id="number"
+                    placeholder="Ingresa numero" [ngClass]="{ 'is-invalid': errores('number')}">
+                    <div class="colorError" *ngIf="form.get('number')?.errors?.['pattern']">
+                      El Teléfono solo debe contener numeros
+                    </div>
+                </div>
+                <div class="form-group col-lg-4">
+                  <label>Ciudad</label>
+                  <input type="text" autocomplete="off" formControlName="cityCode" class="form-control" id="cityCode"
+                    placeholder="Ingresa ciudad" [ngClass]="{ 'is-invalid': errores('cityCode')}">
+                </div>
+                <div class="form-group col-lg-4">
+                  <label>Pais</label>
+                  <input type="text" autocomplete="off" formControlName="contryCode" class="form-control"
+                    id="contryCode" placeholder="Ingresa Pais" [ngClass]="{ 'is-invalid': errores('contryCode')}">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-read-more">
+        <div class="col-lg-12 col-md-12 p-2 text-center">
+          <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Crear</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
