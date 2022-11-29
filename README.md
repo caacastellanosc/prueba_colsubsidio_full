@@ -24,7 +24,7 @@ solucion a la prueba
 * Comenta a otros sobre este proyecto 📢
 * Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
 * Da las gracias públicamente 🤓.
-* etc.![Uploading diagram.png…]()
+* etc.!
 
 
 ⌨️ con ❤️ por [Alejandro Castellanos](https://github.com/caacastellanosc) 😊
